@@ -7,3 +7,4 @@ Flask-Bcrypt
 Flask-Cors
 Flask-Migrate
 SQLAlchemy
+pymysql
