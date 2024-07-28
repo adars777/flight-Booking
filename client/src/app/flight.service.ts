@@ -8,7 +8,7 @@ import { AuthService } from './auth.service';
   providedIn: 'root'
 })
 export class FlightService {
-  private baseUrl = 'http://localhost:8081/flights';
+  private baseUrl = 'https://flight-booking-ofs4.onrender.com/flights';
 
   constructor(private http: HttpClient, private authService:AuthService) {}
 
