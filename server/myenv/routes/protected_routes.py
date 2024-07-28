@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
-from myenv.models import User
+from models import User
 
 protected_bp = Blueprint('protected', __name__)
 
