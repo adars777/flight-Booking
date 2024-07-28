@@ -1,4 +1,4 @@
-from myenv.models import db, Flight
+from models import db, Flight
 from datetime import datetime
 
 def search_flights(source, destination, travel_date):
