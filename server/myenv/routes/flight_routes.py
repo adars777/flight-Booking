@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required
-from myenv.models import db, Flight
+from models import db, Flight
 from datetime import datetime
 
 flight_bp = Blueprint('flights', __name__)
