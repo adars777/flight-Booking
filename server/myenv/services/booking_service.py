@@ -1,4 +1,4 @@
-from myenv.models import db, Booking, Flight
+from models import db, Booking, Flight
 from datetime import datetime
 
 
