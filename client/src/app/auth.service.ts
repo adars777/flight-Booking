@@ -8,7 +8,7 @@ import { tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl = 'http://localhost:8081/auth';
+  private baseUrl = 'https://flight-booking-ofs4.onrender.com/auth';
 
   constructor(private http: HttpClient, private router: Router) {}
 
