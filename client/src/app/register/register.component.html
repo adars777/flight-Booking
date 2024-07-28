@@ -1,0 +1,51 @@
+<div class="register-page">
+
+  <video 
+  muted 
+  autoplay
+  >
+  <source src="assets/newreg.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+  <div class="container">
+    <h2>Register</h2>
+    <form (ngSubmit)="register()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          [(ngModel)]="credentials.username"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="credentials.email"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="credentials.password"
+          required
+        />
+      </div>
+      <button type="submit" [disabled]="!loginForm.form.valid">Register</button>
+      <div class="reg-part">
+        <span>Already have Account?</span>
+        <a routerLink="/login">Login here</a>
+      </div>
+    </form>
+  </div>
+</div>

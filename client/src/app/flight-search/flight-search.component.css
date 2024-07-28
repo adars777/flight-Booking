@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Comfortaa:wght@300..700&family=Playwrite+CL:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.container {
+  position: relative;
+  /* width: 100%; */
+  max-width: 400px;
+  margin:0px auto;
+  /* margin-top: 250px; */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.438);
+  border-radius: 10px;
+  box-shadow: 0 0 8px #00081d;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  backdrop-filter: blur(5px);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-family: "Baskervville SC", serif;
+}
+
+.container h2{
+  text-align: center;
+  font-weight: 700;
+  width: fit-content;
+  margin: 10px auto;
+  padding: 0 4px;
+  font-family: "Baskervville SC", serif;
+  border-bottom: 3px solid #000;
+}
+
+.flights{
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background: url('https://images.unsplash.com/photo-1489685047167-329fdca54750?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover; /* Set your background image */
+
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: bolder;
+  color: #00081d;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #000;
+  background: #b4b4b4;
+  border: none;
+  border-radius: 4px;
+}
+
+input:focus{
+  outline: none;
+  border: none;
+}
+
+button {
+  width: fit-content;
+  margin: 10px auto;
+  padding: 5px 10px;
+  font-weight: bolder;
+  background-color: #007bff;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #000;
+  font-weight: 500;
+}
+
+
+/* styles.css */
+.table-container {
+  margin: 0px auto;
+  padding: 20px;
+  max-width: 1200px;
+  background: #a0a0a0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.table-container h3 {
+  font-family: "Baskervville SC", serif;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size:30px;
+  font-weight: 700;
+  color: #040404;
+}
+
+.flights-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.flights-table thead {
+  background-color: #007BFF;
+  color: white;
+}
+
+.flights-table th,
+.flights-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.flights-table th {
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  font-family: "Bitter", serif;
+
+}
+
+.flights-table tbody tr:nth-child(even) {
+  background-color: #addefa;
+}
+
+.flights-table tbody tr:hover {
+  background-color: #accff0;
+}
+
+.flights-table td {
+  text-align: center;
+  font-family: "Bitter", serif;
+  font-weight: 700;
+
+}
+
+.flights-table button {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.flights-table button:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    padding: 10px;
+  }
+
+  .flights-table th,
+  .flights-table td {
+    padding: 8px;
+  }
+
+  .flights-table button {
+    padding: 6px 12px;
+  }
+}
+
+
+.available{
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  background: url('https://images.pexels.com/photos/1632039/pexels-photo-1632039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+
+}

@@ -1,0 +1,21 @@
+.full img{
+    height: 50px;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full{
+    overflow-x: hidden;
+    /* background: url(); */
+}
+
+app-navbar{
+    position: fixed;
+    background: transparent;
+    width: 100%;
+    height: 50px;
+    z-index: 1;
+}

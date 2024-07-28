@@ -1,0 +1,73 @@
+<div class="flights">
+
+  <!-- search form -->
+  <div class="container">
+    <h2>Search Flights</h2>
+    <form (ngSubmit)="searchFlights()" #searchForm="ngForm">
+      <div class="form-field">
+        <label for="source">Source</label>
+        <input
+          type="text"
+          id="source"
+          [(ngModel)]="searchCriteria.source"
+          name="source"
+          required
+        />
+      </div>
+      <div class="form-field">
+        <label for="destination">Destination</label>
+        <input
+          type="text"
+          id="destination"
+          [(ngModel)]="searchCriteria.destination"
+          name="destination"
+          required
+        />
+      </div>
+      <div class="form-field">
+        <label for="travel_date">Travel Date</label>
+        <input
+          type="date"
+          id="travel_date"
+          [(ngModel)]="searchCriteria.travel_date"
+          name="travel_date"
+          required
+        />
+      </div>
+      <button type="submit" [disabled]="searchForm.invalid">Search</button>
+    </form>
+  </div>
+
+</div>
+
+<div class="available"  *ngIf="flights.length > 0">
+
+  <!-- available flights table  -->
+  <div class="table-container">
+    <h3>Available Flights</h3>
+    <table class="flights-table">
+      <thead>
+        <tr>
+          <th>Flight Number</th>
+          <th>Source</th>
+          <th>Destination</th>
+          <th>Departure Time</th>
+          <th>Arrival Time</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let flight of flights">
+          <td>{{ flight.flight_number }}</td>
+          <td>{{ flight.source }}</td>
+          <td>{{ flight.destination }}</td>
+          <td>{{ flight.departure_time }}</td>
+          <td>{{ flight.arrival_time }}</td>
+          <td>Rs.{{ flight.price }}</td>
+          <td><button (click)="bookFlight(flight)">Book</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

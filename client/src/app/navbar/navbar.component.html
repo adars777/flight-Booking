@@ -1,0 +1,39 @@
+<nav>
+  <div class="navbar">
+    <div class="logo">
+      <!-- <img class="gif" routerLink="/" src="assets/plane.gif" alt="" /> -->
+      <a class="navbar-brand" routerLink="#">SkyGo</a>
+    </div>
+
+    <ul class="nav-links ">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li><a *ngIf="isLoggedIn()" routerLink="/flights">Search</a></li>
+
+        <li><a *ngIf="isLoggedIn()" routerLink="/bookings">My Booking</a></li>
+
+        <!-- Display admin link only if user is admin -->
+        <li *ngIf="isAdmin()"><a routerLink="/admin">Admin</a></li>
+
+        <li>
+          <div class="auth-buttons">
+            <!-- Show logout button if user is logged in -->
+            <div>
+              <button
+                *ngIf="isLoggedIn()"
+                class="btn logout"
+                (click)="logout()"
+              >
+                Logout
+              </button>
+            </div>
+
+            <!-- Show login button if user is not logged in -->
+            <div class="login-btn">
+              <a *ngIf="!isLoggedIn()" routerLink="/login">Login</a>
+            </div>
+          </div>
+        </li>
+    </ul>
+  </div>
+</nav>

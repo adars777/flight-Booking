@@ -1,0 +1,32 @@
+
+
+   <div class="container">
+    <h2>My Bookings</h2>
+    <div *ngIf="bookings.length > 0">
+      <table class="bookings-table">
+        <thead>
+          <tr>
+            <th>Flight Id</th>
+            <th>Departure City</th>
+            <th>Arrival City</th>
+            <th>Departure Time</th>
+            <th>Arrival Time</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let element of bookings">
+            <td>{{element.flight_number}}</td>
+            <td>{{element.source}}</td>
+            <td>{{element.destination}}</td>
+            <td>{{element.departure_time | date:'short'}}</td>
+            <td>{{element.arrival_time | date:'short'}}</td>
+            <td>{{element.status}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div *ngIf="bookings.length === 0">
+      <p>No bookings found.</p>
+    </div>
+  </div>

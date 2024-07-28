@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+CL:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Playwrite+CL:wght@100..400&display=swap");
+
+.video-background-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+  color: white;
+  text-align: center;
+}
+
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* opacity: 0.9; */
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+.hero-section {
+  padding-top: 15%;
+}
+
+.hero-section h1 {
+  font-size: 70px;
+  color: white;
+  font-weight: 900;
+  filter: drop-shadow(12px 12px 2px black);
+  font-family: "Playwrite CL", cursive;
+  margin-bottom: 0.5em;
+  -webkit-filter: drop-shadow(12px 12px 2px black);
+  animation: animation1 infinite 4s ease;
+  -webkit-animation: animation1 infinite 4s ease;
+}
+
+@keyframes animation1 {
+  0% {
+    transition: 0;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    -webkit-transition: 0;
+    -moz-transition: 0;
+    -ms-transition: 0;
+    -o-transition: 0;
+  }
+
+  100% {
+    transition: 1;
+    transform: scale(1);
+    s-webkit-transform: rotateX(90deg);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-transition: 1;
+    -moz-transition: 1;
+    -ms-transition: 1;
+    -o-transition: 1;
+    -webkit-transform: scale(1);
+  }
+}
+
+.hero-section p {
+  font-size: 40px;
+  font-weight: 900;
+  color: #ffffff;
+  text-shadow: 2px 3px 20px #000;
+  margin-bottom: 1em;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.features-section,
+.destinations-section {
+  /* margin-top: 50px; */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.features-section h2,
+.destinations-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.feature,
+.destination {
+  margin: 20px 0;
+}
+
+.feature h3,
+.destination h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.destination img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.destination p {
+  margin-top: 10px;
+}
+
+/* booking flights button */
+.button {
+  --color: #ffffff;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  box-shadow: 0 0 10px #000;
+  border-radius: 0.3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 600;
+  font-size: 17px;
+  border: 2px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+}
+
+.button::before {
+  top: -1em;
+  left: -1em;
+}
+
+.button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.button:hover::before,
+.button:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.button:hover {
+  color: rgb(10, 25, 30);
+}
+
+.button:active {
+  filter: brightness(0.8);
+}

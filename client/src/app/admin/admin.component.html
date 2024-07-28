@@ -1,0 +1,100 @@
+<div class="container">
+  <h2>Admin Panel</h2>
+
+  <!-- Add Flight Form -->
+  <form #flightForm="ngForm" (ngSubmit)="addFlight()">
+    <div class="form-group">
+      <label for="airline">Airline:</label>
+      <input type="text" id="airline" name="airline" [(ngModel)]="newFlight.airline" required class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="flight_number">Flight Number:</label>
+      <input type="text" id="flight_number" name="flight_number" [(ngModel)]="newFlight.flight_number" required class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="departure_city">Departure City:</label>
+      <input type="text" id="departure_city" name="departure_city" [(ngModel)]="newFlight.departure_city" required class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="arrival_city">Arrival City:</label>
+      <input type="text" id="arrival_city" name="arrival_city" [(ngModel)]="newFlight.arrival_city" required class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="departure_time">Departure Time:</label>
+      <input type="datetime-local" id="departure_time" name="departure_time" [(ngModel)]="newFlight.departure_time" required class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="arrival_time">Arrival Time:</label>
+      <input type="datetime-local" id="arrival_time" name="arrival_time" [(ngModel)]="newFlight.arrival_time" required class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" [(ngModel)]="newFlight.price" required class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="available_seats">Available Seats:</label>
+      <input type="number" id="available_seats" name="available_seats" [(ngModel)]="newFlight.available_seats" required class="form-control">
+    </div>
+
+    <button type="submit" [disabled]="flightForm.invalid" class="btn btn-primary">Add Flight</button>
+  </form>
+
+  <!-- All Flights -->
+  <div>
+    <h3>All Flights</h3>
+    <table class="flights-table">
+      <thead>
+        <tr>
+          <th>Flight Number</th>
+          <th>Departure City</th>
+          <th>Arrival City</th>
+          <th>Departure Time</th>
+          <th>Arrival Time</th>
+          <th>Price</th>
+          <th>Available Seats</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let flight of flights">
+          <td>{{ flight.flight_number }}</td>
+          <td>{{ flight.source }}</td>
+          <td>{{ flight.destination }}</td>
+          <td>{{ flight.departure_time | date: 'short' }}</td>
+          <td>{{ flight.arrival_time | date: 'short' }}</td>
+          <td>Rs.{{ flight.price }}</td>
+          <td>{{ flight.seats_available }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- All User Bookings -->
+  <div>
+    <h3>All User Bookings</h3>
+    <table class="bookings-table">
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Flight ID</th>
+          <th>Booking Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let booking of bookings">
+          <td>{{ booking.user_id }}</td>
+          <td>{{ booking.flight_id }}</td>
+          <td>{{ booking.booking_date | date: 'short' }}</td>
+          <td>{{ booking.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

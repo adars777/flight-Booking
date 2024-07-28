@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+.about img {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.about-details {
+  padding-top: 80px;
+  position: relative;
+}
+
+.about-details h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+  font-weight: 700;
+  margin: 0 auto;
+}
+
+.first,
+.second,
+.third,
+.forth,.fifth,.sixth {
+  margin: 40px 40px;
+}
+
+h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px;
+  font-size: 45px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 900;
+  color: #000;
+  background-color: gray;
+}
+
+h3 svg {
+  width: 40px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 25px;
+  margin: 5px 5px;
+  background-color: rgba(1, 85, 210, 0.474);
+  font-weight: 700;
+  padding: 10px 20px;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 0 10px #000;
+  font-family: "Quicksand", sans-serif;
+  text-transform: capitalize;
+}
+
+.first .left {
+  padding: 10px 30px;
+  max-width: 50%;
+}
+
+video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  border: 5px solid #5c5c5c5d;
+}
+
+video::-webkit-media-controls-fullscreen-button {
+  display: none;
+}
+
+video::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}
+
+video::-webkit-media-controls-panel {
+  width: calc(100% + 30px); /* Adjust this value based on your needs */
+}
+
+.lists {
+  margin-top: 5px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 5px;
+  background-color: rgba(1, 85, 210, 0.474);
+}
+
+li {
+  list-style: "🛩️";
+  width: 25%;
+}
+
+
+
+ul span {
+  width: 75%;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 0;
+  text-shadow: 0 0 10px #000;
+}
+
+li .heading-list {
+    padding: 0 3px;
+    font-size: 22px;
+    font-weight: 800;
+    font-family: "Quicksand", sans-serif;
+  text-shadow: 0 0 10px #fff;
+
+    color: #000000;
+  }
+
+.third .lists {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.second .heading {
+  display: flex;
+  background-color: gray;
+  align-items: center;
+}
+
+.heading img {
+  position: relative;
+  width: 50px;
+  z-index: 1;
+  top: -2px;
+}
+
+.offers {
+  display: flex;
+  background-color: gray;
+  align-items: center;
+}
+
+.offers img {
+  position: relative;
+  width: 50px;
+  z-index: 1;
+  top: -2px;
+}
+
+.forth
+  .lists {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
