@@ -1,5 +1,5 @@
 from werkzeug.security import generate_password_hash, check_password_hash
-from myenv.models import db, User
+from models import db, User
 
 def hash_password(password):
     return generate_password_hash(password)
