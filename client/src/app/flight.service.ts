@@ -31,6 +31,6 @@ export class FlightService {
 
   getAllFlights() {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${this.authService.getToken()}`);
-    return this.http.get(`http://localhost:8081/admin/allflights`,{headers});
+    return this.http.get(`https://flight-booking-ofs4.onrender.com/admin/allflights`,{headers});
   }
 }
