@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_jwt_extended import JWTManager
 from config import Config
-from myenv.models import db
+from models import db
 from flask_cors import CORS
 
 app = Flask(__name__)
